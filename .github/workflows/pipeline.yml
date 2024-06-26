@@ -27,7 +27,7 @@ jobs:
       run: echo 'ilianachakarova'
 
   build-and-ui-test:
-   needs: build-and-unit-test 
+   needs: build-and-unit-test  
    runs-on: ubuntu-latest
 
    steps:
@@ -43,6 +43,6 @@ jobs:
     - name: Install playwright browsers
       run: npx playwright install   
     - name: Start server
-      run: npm start
+      run: npm run start &
     - name: Execute ui tests
       run: npm run test:ui    
